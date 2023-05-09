@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recep Kadir ERTÜRK</title>
+    <style>
+        .putPlace {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 250px;  
+    border: 1px #ff0 solid;
+    box-shadow: 0vh 0vh 1vh rgb(255, 0, 195);
+    border-radius: 1vh;
+    padding: 1vh;
+    }
+        .putPlace:hover {
+    box-shadow: 0vh 0vh 2vh #fb00ff;
+    }
+    </style>
+</head>
+<body bgcolor="#bbf">
+    <hr color="black">
+    <h1 style="text-align: center; font-size: 50px;">Sürükle Bırak</h1>
+    <hr color="black">
+<div style="display: flex; gap: 2vh;">
+    <div id="putPlace" class="putPlace" ondrop="put(event)" ondragover="return false;">
+        Resimi buraya sürükleyin.
+    </div>
+    <img id="resim" src="../pp.png" draggable="true" ondragstart="drag(event)" width="250" height="250" alt="ctk" style="border-radius: 1vh; margin: 1vh">
+    <script>
+        const drag = (element) => element.dataTransfer.setData("text", element.target.id);
+        const put = (element) => {
+            element.preventDefault();
+            let putPlace = document.getElementById("putPlace")
+            putPlace.innerHTML = ``
+            var veri = element.dataTransfer.getData("text");
+            element.target.appendChild(document.getElementById(veri));
+        }
+    </script>
+</div>
+</body>
+</html>

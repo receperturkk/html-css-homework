@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recep Kadir ERTÜRK</title>
+</head>
+<body bgcolor="#bbf">
+    <hr color="black">
+    <div>
+        <h1 style="text-align: center;">İŞ BAŞVURU FORMU</h1>
+    </div>
+    <hr color="black">
+    <form action="" method="get" id="form1">
+        <fieldset>
+            <label for="kadi">Ad:</label>
+            <input name="kullanıcı adı" autofocus placeholder="Adınızı yazınız." required><br><br>
+            <label for="sfr">Soyad:</label>
+            <input name="şifre" placeholder="Soyadınızı yazınız."  required><br><br>
+            <label for="dg">Doğum tarihiniz:</label>
+            <input name="tarih" type="date"><br><br>
+            <label for="yaş">Yaş:</label>
+            <input name="yaş" id="yaş" required type="number" min="18" max="100" value="18"><br><br>
+            <label for="cinsiyet">Cinsiyet:</label>
+            <label>
+                <input type="radio" name="cinsiyet" required value="erkek">Erkek
+            </label>
+            <label>
+                <input type="radio" name="cinsiyet"  value="kadin">Kadın 
+            </label><br><br>
+            <label for="cinsiyet">Medeni Haliniz:</label>
+            <label>
+                <input type="radio" name="medeni" required value="evli">Evli
+            </label>
+            <label>
+                <input type="radio" name="medeni"  value="bekar">Bekar
+            </label>
+            <label>
+                <input type="radio" name="medeni"  value="boşanmış">Boşanmış
+            </label><br><br>
+            <label for="medeni">Öğrenim Durumunuz:</label>
+            <select name="medeni" id="medeni" required>
+                <optgroup label="Öğrenim Durumunuz">
+                    <option value="e">İlkokul</option>
+                    <option value="b">Ortaokul</option>
+                    <option value="b">Lise</option>
+                    <option value="b">Üniversite</option>
+                </optgroup> 
+            </select><br><br>
+            <label for="mail">E-posta:</label>
+            <input name="eposta" placeholder="E-posta adresinizi giriniz." id="mail" required type="email"><br><br>
+            <label for="neden">Sizi neden işe almalıyız.</label><br>
+            <textarea name="neden" id="neden" cols="30" rows="10" style="width: 271px; height: 58px;"></textarea><br><br>
+            <button type="submit">Gönder</button>
+            <button type="reset">Sıfırla</button>
+        </fieldset>
+    </form>
+</body>
+</html>
